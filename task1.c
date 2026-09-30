@@ -14,5 +14,5 @@ int main() {
     else
         printf("\nWeak Password\n");
 
-
+    return 0;
 }
