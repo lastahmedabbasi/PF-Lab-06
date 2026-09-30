@@ -1,15 +1,17 @@
-#import <stdio.h>
+#include <stdio.h>
 
 int main() {
-    int pin, sum=0;
+    int pin, sum = 0;
+
     printf("Enter your pin.\n");
     scanf("%d", &pin);
 
-    for (int i = 1; i<=4: i++){
-        sum = sum + (pin % (10**i));
+    for (int i = 1; i <= 4; i++) {
+        sum = sum + (pin % 10);
+        pin = pin / 10;
     }
 
-    if (i > 10)
+    if (sum > 10)
         printf("\nStrong Password\n");
     else
         printf("\nWeak Password\n");
