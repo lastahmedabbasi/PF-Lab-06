@@ -2,7 +2,6 @@
 
 int main() {
     int pin, sum=0;
-    bool isStrong = False;
     printf("Enter your pin.\n");
     scanf("%d", &pin);
 
@@ -11,9 +10,9 @@ int main() {
     }
 
     if (i > 10)
-        printf("Strong Password");
+        printf("\nStrong Password\n");
     else
-        printf("Weak Password");
+        printf("\nWeak Password\n");
 
 
 }
