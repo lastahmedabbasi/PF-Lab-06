@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int reading, no_of_even=0, no_of_odd=0;
+    int reading, temporary;
+    int no_of_even = 0, no_of_odd = 0;
+    int no_of_digits = 0;
 
     printf("Enter your electric reading: ");
     scanf("%d", &reading);
@@ -15,7 +17,7 @@ int main() {
 
     for (int i = 1; i <= no_of_digits; i++) {
 
-        if (reading % 2)
+        if (!(reading % 2))
             no_of_even += 1;
         else
             no_of_odd += 1;
@@ -23,7 +25,7 @@ int main() {
         reading /= 10;
     }
 
-    printf("\nNumber of digits even: %d\nNumber of digits odd: %d", no_of_even, no_of_odd)
+    printf("\nNumber of digits even: %d\nNumber of digits odd: %d", no_of_even, no_of_odd);
     
     return 0;
 }
