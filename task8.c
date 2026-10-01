@@ -37,14 +37,12 @@ int main(){
         printf("Number not found\n");
     }
 
-    printf("Enter a number to insert: ");
-    printf("Enter the index to insert at (0-7): ");
     int insert_num, insert_index;
-    scanf("%d %d", &insert_num, &insert_index);
+    printf("Enter a number to insert: ");
+    scanf("%d", &insert_num);
+    printf("Enter the index to insert at (0-7): ");
+    scanf("%d", &insert_index);
     if(insert_index >= 0 && insert_index < 8){
-        for(int i = 7; i > insert_index; i--){
-            arr[i] = arr[i-1];
-        }
         arr[insert_index] = insert_num;
     } else {
         printf("Invalid index\n");
@@ -62,6 +60,7 @@ int main(){
         for(int i = delete_index; i < 7; i++){
             arr[i] = arr[i+1];
         }
+        arr[7] = 0; //avoiding duplicate last elements
     } else {
         printf("Invalid index\n");
     }
