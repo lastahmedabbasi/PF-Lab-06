@@ -1,4 +1,4 @@
-#import <stdio.h>
+#include <stdio.h>
 
 int main(){
     int present=0, absent, isPresent;
